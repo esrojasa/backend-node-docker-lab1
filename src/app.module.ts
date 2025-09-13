@@ -14,9 +14,9 @@ import { TypeOrmModule } from '@nestjs/typeorm';
     TypeOrmModule.forRoot({
       type: 'mysql',
       host: process.env.DB_HOST || 'localhost',
-      port: parseInt(process.env.DB_PORT ?? '5432'),
-      username: process.env.DB_USERNAME || 'postgres',
-      password: process.env.DB_PASSWORD || 'password',
+      port: parseInt(process.env.DB_PORT ?? '3306'),
+      username: process.env.DB_USERNAME || 'nestjs_user',
+      password: process.env.DB_PASSWORD || 'nestjs_password',
       database: process.env.DB_NAME || 'nestjs_db',
       autoLoadEntities: true, // Carga automática de entidades
       synchronize: false, // NUNCA true en producción
